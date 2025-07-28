@@ -74,12 +74,11 @@ const HeroSection = () => {
         </form>
 
         {/* Trust Indicator */}
-        <div className="trust-indicators flex items-center justify-center space-x-4 text-sm text-ice-crystal/60">
+        <div className="trust-indicators flex items-center justify-center space-x-6 text-sm text-ice-crystal/60">
           <span className="flex items-center">
             <div className="w-2 h-2 bg-aqua-ethereal rounded-full mr-2 animate-pulse"></div>
             AI-powered
           </span>
-          <span className="text-ice-crystal/40">•</span>
           <span className="flex items-center">
             <div className="w-2 h-2 bg-money-green rounded-full mr-2"></div>
             Bank-grade security
