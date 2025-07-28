@@ -254,36 +254,67 @@
     opacity: 0.7;
   }
 
-  /* Email Arrow CTA */
-  .email-arrow {
-    display: flex;
-    justify-content: flex-end; /* Right-aligned after email */
-    margin: 20px auto 0;
-    max-width: 400px; /* Match email width */
+  /* Email Field with Embedded Arrow */
+  .email-field {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+
+  .email-input {
+    background: rgba(255,255,255,0.12); /* Transparent glass */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    color: hsl(var(--ice-crystal)) !important;
+    font-weight: 500;
+    padding: 18px 50px 18px 20px !important; /* Room for arrow */
+    border-radius: 50px !important;
+    width: 100%;
+    font-size: 16px !important;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 0 15px rgba(64,203,240,0.4) !important; /* Ethereal glow */
+    transition: box-shadow 0.3s ease !important;
+    outline: none !important;
+    text-align: left !important;
+  }
+
+  .email-input:focus,
+  .email-input:hover {
+    box-shadow: 0 0 25px rgba(127,255,212,0.3) !important; /* Tokenized glow */
+    ring: none !important;
   }
 
   .arrow-icon {
-    font-size: 24px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     color: hsl(var(--aqua-ethereal));
-    text-shadow: 0 1px 3px rgba(127,255,212,0.3);
-    transition: all 0.3s ease;
+    text-shadow: 0 0 8px rgba(127,255,212,0.3); /* Tokenized */
     cursor: pointer;
     padding: 8px;
-    background: rgba(255,255,255,0.1);
+    background: transparent;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(64,203,240,0.2);
+    transition: all 0.3s ease;
   }
 
-  .arrow-icon:hover {
+  .arrow-icon:hover,
+  .email-input:focus + .arrow-icon {
     color: hsl(var(--cyan-electric));
-    transform: translateX(4px); /* Subtle shift right */
-    box-shadow: 0 0 15px rgba(127,255,212,0.4);
+    text-shadow: 0 0 12px rgba(64,203,240,0.5); /* Dynamic glow */
+    transform: translateY(-50%) translateX(2px); /* Subtle shift */
+    animation: glowPulse 1.4s ease-in-out infinite; /* Optional shimmer */
   }
 
-  /* Focus accessibility */
   .arrow-icon:focus {
     outline: 2px solid #7FFFD4;
     outline-offset: 2px;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { text-shadow: 0 0 8px rgba(127,255,212,0.3); }
+    50% { text-shadow: 0 0 14px rgba(127,255,212,0.4); }
   }
 
   /* Glass Container - Legacy */
@@ -452,12 +483,18 @@
       font-size: 18px;
     }
     
-     .email-arrow {
-       margin: 15px auto 0;
+     .email-field {
+       max-width: 90%;
+     }
+     
+     .email-input {
+       padding: 16px 44px 16px 16px !important;
+       font-size: 15px !important;
      }
      
      .arrow-icon {
-       font-size: 20px;
+       font-size: 16px;
+       right: 10px;
        padding: 6px;
      }
      
