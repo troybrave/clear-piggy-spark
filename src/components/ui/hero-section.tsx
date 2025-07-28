@@ -29,17 +29,7 @@ const HeroSection = () => {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
       {/* Logo Beacon - Outside Glass */}
       <div className="logo-section">
-        <div className="logo-tile">
-          <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M32 18C32 22 28 26 24 26H12C8 26 4 22 4 18C4 14 8 10 12 10H24C28 10 32 14 32 18Z" fill="black"/>
-            <path d="M24 12C26 12 28 14 28 16C28 18 26 20 24 20C22 20 20 18 20 16C20 14 22 12 24 12Z" fill="black"/>
-            <circle cx="16" cy="18" r="2" fill="white"/>
-            <rect x="18" y="8" width="8" height="4" rx="2" fill="black"/>
-            <rect x="8" y="22" width="4" height="6" rx="2" fill="black"/>
-            <rect x="24" y="22" width="4" height="6" rx="2" fill="black"/>
-          </svg>
-        </div>
-        <h1 className="logo-text">Clear Piggy</h1>
+        <img src="/lovable-uploads/11a74ea6-2a59-4e9e-af54-bc6ff64f1aae.png" alt="Clear Piggy Logo" className="logo-img" />
       </div>
 
       {/* Glass Container - Pure CTA Focus */}

@@ -73,35 +73,19 @@
   .logo-section {
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
     margin: 60px auto 50px;
-    justify-content: center;
   }
 
-  .logo-tile {
-    width: 36px;
-    height: 36px;
-    background: white;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 12px rgba(127,255,212,0.3);
-    animation: pulseGlow 2s infinite ease-in-out;
+  .logo-img {
+    height: 64px;
+    width: auto;
+    filter: drop-shadow(0 0 12px rgba(127,255,212,0.3));
+    transition: filter 0.3s ease;
   }
 
-  @keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 0 12px rgba(127,255,212,0.3); }
-    50% { box-shadow: 0 0 16px rgba(127,255,212,0.5); }
-  }
-
-  .logo-text {
-    font-size: 36px;
-    font-weight: 600;
-    background: var(--brand-text-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
+  .logo-img:hover {
+    filter: drop-shadow(0 0 16px rgba(127,255,212,0.5)) brightness(1.1) saturate(1.2);
   }
 
   /* Glass Container - Refined */
@@ -125,8 +109,9 @@
   }
 
   .tagline-section {
+    max-width: 600px;
+    margin: 48px auto 32px auto;
     text-align: left;
-    margin-top: 48px;
   }
 
   .tagline-line {
