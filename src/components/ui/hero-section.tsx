@@ -63,9 +63,9 @@ const HeroSection = () => {
             />
           </div>
 
-          <button type="submit" className="rainbow-glow-btn" aria-label="Join Waitlist">
-            Join Waitlist
-          </button>
+          <div className="email-arrow">
+            <span className="arrow-icon">➡️</span>
+          </div>
         </form>
 
         {/* Trust Indicator */}
