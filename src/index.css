@@ -273,7 +273,10 @@
     width: 100%;
     font-size: 16px !important;
     font-family: 'Inter', sans-serif;
-    box-shadow: 0 0 15px rgba(64,203,240,0.4) !important; /* Ethereal glow */
+    box-shadow: 
+      0 0 15px rgba(64,203,240,0.4),
+      0 0 30px rgba(127,255,212,0.2),
+      0 0 45px rgba(138,43,226,0.1) !important; /* Rainbow glow layers */
     transition: box-shadow 0.3s ease !important;
     outline: none !important;
     text-align: left !important;
@@ -281,7 +284,12 @@
 
   .email-input:focus,
   .email-input:hover {
-    box-shadow: 0 0 25px rgba(127,255,212,0.3) !important; /* Tokenized glow */
+    box-shadow: 
+      0 0 25px rgba(64,203,240,0.6),
+      0 0 40px rgba(127,255,212,0.4),
+      0 0 55px rgba(138,43,226,0.3),
+      0 0 70px rgba(255,20,147,0.2),
+      0 0 85px rgba(255,69,0,0.1) !important; /* Enhanced rainbow glow */
     ring: none !important;
   }
 
