@@ -29,6 +29,7 @@ const HeroSection = () => {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
       {/* Logo Beacon - Outside Glass */}
       <div className="logo-section">
+        <h1 className="logo-text">Clear Piggy</h1>
         <img src="/lovable-uploads/11a74ea6-2a59-4e9e-af54-bc6ff64f1aae.png" alt="Clear Piggy Logo" className="logo-img" />
       </div>
 
