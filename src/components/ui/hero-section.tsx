@@ -51,19 +51,19 @@ const HeroSection = () => {
 
         {/* Tagline */}
         <div className="tagline-section">
-          <p className="tagline-line">🌐 Stop settling for a rearview budget.</p>
+          <p className="tagline-line">🚩 Stop settling for a rearview budget.</p>
           <p className="tagline-line">📍 Decide your money's next move.</p>
         </div>
 
         {/* Email Form */}
         <form onSubmit={handleSubmit} className="email-form">
-          <div className="relative mb-5">
+          <div className="relative mb-5 flex justify-center">
             <Input
               type="email"
               placeholder="Enter your email to get started"
               value={email}
               onChange={handleEmailChange}
-              className="email-input glass-input w-full text-center text-lg border-0 focus:ring-2 focus:ring-aqua-ethereal/50"
+              className="email-input glass-input text-center text-lg border-0 focus:ring-2 focus:ring-aqua-ethereal/50"
               required
             />
           </div>
@@ -93,10 +93,10 @@ const HeroSection = () => {
       </div>
 
       {/* Value Quote - Below Glass */}
-      <blockquote className="value-quote">
-        "Where will your money take you in 1 year? Let AI auto-categorize your transactions 
-        and map your money so you can find out in 5 minutes."
-      </blockquote>
+      <div className="value-quote">
+        <p className="value-question">"Where will your money take you in 1 year?"</p>
+        <p className="value-challenge">Let AI auto-categorize your transactions and map your money so you can find out in 5 minutes.</p>
+      </div>
 
       {/* Stats Bar - Trust Metrics */}
       <div className="stats-bar">

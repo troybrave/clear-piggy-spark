@@ -125,7 +125,7 @@
   }
 
   .tagline-section {
-    text-align: center;
+    text-align: left;
     margin-top: 48px;
   }
 
@@ -144,16 +144,28 @@
 
   /* Value Quote - Below Glass */
   .value-quote {
-    font-style: italic;
-    font-size: 20px;
-    line-height: 1.6;
     text-align: center;
     margin: 40px auto 0;
     max-width: 620px;
-    color: hsl(var(--ice-crystal));
     opacity: 0;
     transform: translateY(10px);
     animation: fadeInUp 0.8s ease 0.3s forwards;
+  }
+
+  .value-question {
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.4;
+    color: hsl(var(--ice-crystal));
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .value-challenge {
+    font-size: 18px;
+    line-height: 1.6;
+    color: hsl(var(--aqua-ethereal));
+    font-weight: 400;
   }
 
   /* Stats Bar */
