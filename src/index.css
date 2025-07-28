@@ -341,8 +341,9 @@
   .glass-input::placeholder {
     color: rgba(224, 255, 255, 0.6);
   }
-  }
+}
 
+@layer components {
   /* Footer Links */
   .footer-links {
     padding: 20px 0;
