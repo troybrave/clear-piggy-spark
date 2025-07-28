@@ -26,7 +26,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 pt-16">
       {/* Logo Beacon - Outside Glass */}
       <div className="logo-section">
         <h1 className="logo-text">Clear Piggy</h1>
@@ -74,7 +74,7 @@ const HeroSection = () => {
         </form>
 
         {/* Trust Indicator */}
-        <div className="trust-indicators flex items-center justify-center space-x-6 text-sm text-ice-crystal/60">
+        <div className="trust-indicators flex items-center justify-center space-x-6 text-sm text-ice-crystal/60 mt-8">
           <span className="flex items-center">
             <div className="w-2 h-2 bg-aqua-ethereal rounded-full mr-2 animate-pulse"></div>
             AI-powered
