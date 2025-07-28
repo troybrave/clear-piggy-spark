@@ -41,14 +41,8 @@ const HeroSection = () => {
         </h2>
 
         {/* Tagline */}
-        <p className="tagline text-lg md:text-xl text-ice-crystal/80 font-medium leading-relaxed">
+        <p className="tagline text-lg md:text-xl font-medium leading-relaxed">
           Stop settling for a financial rearview. Decide where your money is taking you.
-        </p>
-
-        {/* Value Proposition */}
-        <p className="value-prop text-base md:text-lg text-ice-crystal/90 max-w-lg mx-auto leading-relaxed">
-          Where will your money take you in 1 year? Let AI auto-categorize your transactions 
-          and map your money so you can find out in 5 minutes.
         </p>
 
         {/* Email Form */}
@@ -85,6 +79,21 @@ const HeroSection = () => {
             <div className="w-2 h-2 bg-money-green rounded-full mr-2"></div>
             Bank-grade security
           </span>
+        </div>
+      </div>
+
+      {/* Value Quote - Below Glass */}
+      <blockquote className="value-quote">
+        "Where will your money take you in 1 year? Let AI auto-categorize your transactions 
+        and map your money so you can find out in 5 minutes."
+      </blockquote>
+
+      {/* Stats Bar - Trust Metrics */}
+      <div className="stats-bar">
+        <div className="stats-content">
+          <span>5,000+ Transactions</span>
+          <span>99.2% AI Precision</span>
+          <span>Setup in 5 Minutes</span>
         </div>
       </div>
     </div>
