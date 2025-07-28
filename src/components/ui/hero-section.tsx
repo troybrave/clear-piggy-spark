@@ -41,8 +41,10 @@ const HeroSection = () => {
 
         {/* Tagline */}
         <div className="tagline-section">
-          <p className="tagline-line">🚩 Stop settling for a rearview budget.</p>
-          <p className="tagline-line">📍 Decide your money's next move.</p>
+          <div className="tagline-block">
+            <p className="tagline-line">🚩 Stop settling for a rearview budget.</p>
+            <p className="tagline-line">📍 Decide your money's next move.</p>
+          </div>
         </div>
 
         {/* Email Form */}
