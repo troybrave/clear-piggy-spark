@@ -81,7 +81,7 @@ const HeroSection = () => {
       {/* Value Quote - Below Glass */}
       <div className="value-quote">
         <p className="value-question">"Where will your money take you in 1 year?"</p>
-        <p className="value-challenge">In less than 5 minutes, let AI map your financial future so you don't have to!</p>
+        <p className="value-challenge">In less than 5 minutes...<br />Let AI map your financial future so you don't have to!</p>
       </div>
 
       {/* Stats Bar - Trust Metrics */}
