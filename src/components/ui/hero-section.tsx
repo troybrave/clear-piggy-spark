@@ -63,14 +63,6 @@ const HeroSection = () => {
             />
           </div>
 
-          {/* CTA Button - Rainbow Glow Signature Element */}
-          <Button
-            type="submit"
-            className="rainbow-glow-btn text-lg px-12 py-6 w-full md:w-auto hover:transform hover:-translate-y-0.5 transition-transform"
-            disabled={!isValidEmail}
-          >
-            Map My Money
-          </Button>
         </form>
 
         {/* Trust Indicator */}
