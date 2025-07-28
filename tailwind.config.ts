@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,16 +55,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Clear Piggy Brand Colors
+				'fresh-navy': 'hsl(var(--fresh-navy))',
+				'cyan-electric': 'hsl(var(--cyan-electric))',
+				'aqua-ethereal': 'hsl(var(--aqua-ethereal))',
+				'regal-green': 'hsl(var(--regal-green))',
+				'money-green': 'hsl(var(--money-green))',
+				'ice-crystal': 'hsl(var(--ice-crystal))',
+				'teal-shadow': 'hsl(var(--teal-shadow))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
