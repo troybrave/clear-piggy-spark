@@ -88,7 +88,7 @@
   }
 
   .logo-img {
-    height: 80px;
+    height: 136px;
     width: auto;
     filter: drop-shadow(0 0 12px rgba(127,255,212,0.3));
     transition: filter 0.3s ease;
@@ -340,6 +340,25 @@
 
   .glass-input::placeholder {
     color: rgba(224, 255, 255, 0.6);
+  }
+  }
+
+  /* Footer Links */
+  .footer-links {
+    padding: 20px 0;
+  }
+
+  .footer-link {
+    color: hsl(var(--aqua-ethereal));
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: hsl(var(--cyan-electric));
+    text-decoration: underline;
   }
 }
 

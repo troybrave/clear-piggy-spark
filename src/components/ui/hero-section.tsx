@@ -37,7 +37,9 @@ const HeroSection = () => {
       <div className="glass-container-refined max-w-2xl w-full text-center">
         {/* Hero Title */}
         <h2 className="hero-title text-5xl md:text-7xl font-bold text-ice-crystal leading-tight">
-          Control Your Money's Next Move
+          Control<br />
+          Your Money's<br />
+          Next Move
         </h2>
 
         {/* Tagline */}
@@ -98,6 +100,13 @@ const HeroSection = () => {
           <span>99.2% AI Precision</span>
           <span>Setup in 5 Minutes</span>
         </div>
+      </div>
+
+      {/* Footer Links */}
+      <div className="footer-links mt-8 text-center">
+        <a href="/privacy" className="footer-link">Privacy Policy</a>
+        <span className="text-ice-crystal/40 mx-3">•</span>
+        <a href="/terms" className="footer-link">Terms of Service</a>
       </div>
     </div>
   );
