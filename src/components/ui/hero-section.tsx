@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import piggyLogo from '@/assets/piggy-logo.png';
 
 const HeroSection = () => {
   const [email, setEmail] = useState('');
@@ -30,7 +29,7 @@ const HeroSection = () => {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
       {/* Logo Beacon - Outside Glass */}
       <div className="logo-section">
-        <img src={piggyLogo} alt="Clear Piggy" className="logo-img" />
+        <img src="/lovable-uploads/65261793-9153-437e-a955-ba61edad7268.png" alt="Clear Piggy" className="logo-img" />
         <h1 className="logo-text">Clear Piggy</h1>
       </div>
 
