@@ -69,7 +69,58 @@
 }
 
 @layer components {
-  /* Glass Container */
+  /* Logo Section */
+  .logo-section {
+    text-align: center;
+  }
+
+  .logo-text {
+    background: var(--brand-text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glass Container - Refined */
+  .glass-container-refined {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    padding: 60px 40px 50px;
+  }
+
+  /* Layout Spacing */
+  .hero-title {
+    margin-bottom: 24px;
+    line-height: 1.1;
+  }
+
+  .tagline {
+    margin-bottom: 24px;
+  }
+
+  .value-prop {
+    margin-bottom: 32px;
+  }
+
+  .email-form {
+    margin-bottom: 24px;
+  }
+
+  .email-input {
+    background: rgba(255, 255, 255, 0.05);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .trust-indicators {
+    margin-top: 24px;
+    font-size: 14px;
+  }
+
+  /* Glass Container - Legacy */
   .glass-container {
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(15px);
@@ -161,6 +212,28 @@
 @layer utilities {
   .font-inter {
     font-family: 'Inter', sans-serif;
+  }
+  
+  /* Mobile Responsive Adjustments */
+  @media (max-width: 768px) {
+    .logo-section {
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+    
+    .logo-text {
+      font-size: 28px;
+    }
+    
+    .glass-container-refined {
+      padding: 50px 30px 40px;
+      margin: 0 20px;
+    }
+    
+    .hero-title {
+      font-size: 36px;
+      line-height: 1.2;
+    }
   }
   
   @media (prefers-reduced-motion: reduce) {
