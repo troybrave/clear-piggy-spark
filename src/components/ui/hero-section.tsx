@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import piggyLogo from '@/assets/piggy-logo.png';
 
 const HeroSection = () => {
   const [email, setEmail] = useState('');
@@ -28,10 +29,9 @@ const HeroSection = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
       {/* Logo Beacon - Outside Glass */}
-      <div className="logo-section mt-15 mb-10 md:mt-15 md:mb-10">
-        <h1 className="logo-text text-4xl md:text-5xl font-bold brand-text">
-          Clear Piggy
-        </h1>
+      <div className="logo-section">
+        <img src={piggyLogo} alt="Clear Piggy" className="logo-img" />
+        <h1 className="logo-text">Clear Piggy</h1>
       </div>
 
       {/* Glass Container - Pure CTA Focus */}

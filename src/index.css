@@ -72,13 +72,31 @@
   /* Logo Section */
   .logo-section {
     text-align: center;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .logo-img {
+    height: 36px;
+    filter: drop-shadow(0 2px 8px rgba(127,255,212,0.3));
+    transition: filter 0.3s ease;
+  }
+
+  .logo-img:hover {
+    filter: drop-shadow(0 4px 12px rgba(127,255,212,0.5));
   }
 
   .logo-text {
+    font-size: 36px;
+    font-weight: 700;
     background: var(--brand-text-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin: 0;
   }
 
   /* Glass Container - Refined */
@@ -93,15 +111,28 @@
 
   /* Layout Spacing */
   .hero-title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
     margin-bottom: 24px;
-    line-height: 1.1;
+    color: hsl(var(--ice-crystal));
   }
 
   .tagline {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    opacity: 0.85;
+    letter-spacing: 0.3px;
     margin-bottom: 24px;
   }
 
   .value-prop {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.8;
     margin-bottom: 32px;
   }
 
@@ -118,6 +149,7 @@
   .trust-indicators {
     margin-top: 24px;
     font-size: 14px;
+    opacity: 0.7;
   }
 
   /* Glass Container - Legacy */
@@ -217,8 +249,12 @@
   /* Mobile Responsive Adjustments */
   @media (max-width: 768px) {
     .logo-section {
-      margin-top: 40px;
-      margin-bottom: 30px;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    
+    .logo-img {
+      height: 28px;
     }
     
     .logo-text {
@@ -231,8 +267,17 @@
     }
     
     .hero-title {
-      font-size: 36px;
+      font-size: 48px;
+      letter-spacing: -0.3px;
       line-height: 1.2;
+    }
+    
+    .tagline {
+      font-size: 18px;
+    }
+    
+    .value-prop {
+      font-size: 16px;
     }
   }
   
