@@ -533,11 +533,73 @@
   
   /* Mobile Email Input Fixes */
   @media (max-width: 480px) {
+    /* Mobile AI-Inspired Layout Restructuring */
+    
+    /* Logo: Compact and positioned above glass container */
+    .mobile-logo-reorder {
+      order: 1;
+      margin-bottom: 16px !important;
+    }
+    
+    .logo-text {
+      font-size: 1.5rem !important;
+      margin-bottom: 4px !important;
+    }
+    
+    .logo-img {
+      height: 32px !important;
+      width: auto !important;
+    }
+    
+    /* Glass Container: Reordered for mobile */
+    .mobile-glass-reorder {
+      order: 2;
+      margin-top: 0 !important;
+      padding: 24px 20px !important;
+    }
+    
+    /* Email Form: Hero element on mobile */
+    .mobile-email-priority {
+      order: 1;
+      margin-bottom: 24px !important;
+      margin-top: 0 !important;
+    }
+    
+    /* Hero Title: Below email on mobile */
+    .mobile-title-reorder {
+      order: 2;
+      font-size: 1.5rem !important;
+      line-height: 1.2 !important;
+      margin-bottom: 16px !important;
+      margin-top: 0 !important;
+    }
+    
+    /* Tagline: Compressed spacing */
+    .tagline-section {
+      order: 3;
+      margin-bottom: 16px !important;
+      margin-top: 0 !important;
+    }
+    
+    .tagline-line {
+      font-size: 0.9rem !important;
+      margin-bottom: 4px !important;
+    }
+    
+    /* Trust Indicators: Tighter spacing */
+    .trust-indicators {
+      order: 4;
+      margin-top: 16px !important;
+      font-size: 0.8rem !important;
+    }
+    
+    /* Email Input: Enhanced for mobile prominence */
     .email-input {
-      font-size: 14px !important;
-      line-height: 44px;
-      height: 44px;
-      padding: 0 44px 0 16px !important;
+      font-size: 16px !important;
+      line-height: 48px;
+      height: 48px;
+      padding: 0 48px 0 16px !important;
+      border-radius: 12px !important;
     }
     
     .email-input::placeholder {
