@@ -232,8 +232,8 @@ const HeroSection = () => {
 
         {/* Taglines MOVED INSIDE GLASS */}
         <div className="tagline-section-inside">
-          <p className="tagline-line-inside">🚩 Stop settling for a rearview budget.</p>
-          <p className="tagline-line-inside">📍 Decide your money's next move.</p>
+          <p className="tagline-line-inside">Clarity doesn't live in the rearview.</p>
+          <p className="tagline-line-inside">Control your money. Choose your future.</p>
         </div>
       </div>
 
