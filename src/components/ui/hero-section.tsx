@@ -157,16 +157,20 @@ const HeroSection = () => {
   // Default Form Screen
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 pt-16">
-      {/* Mobile: Logo above everything, Desktop: Logo outside glass */}
-      <div className="logo-section mobile-logo-reorder">
+      {/* 1. Clear Piggy Logo & Headline - Very Top */}
+      <div className="logo-section">
         <h1 className="logo-text">Clear Piggy</h1>
         <img src="/lovable-uploads/11a74ea6-2a59-4e9e-af54-bc6ff64f1aae.png" alt="Clear Piggy Logo" className="logo-img" />
       </div>
 
-      {/* Glass Container - Mobile: Email first, Desktop: Title first */}
-      <div className="glass-container-refined max-w-2xl w-full text-center mobile-glass-reorder">
-        {/* Email Form - Mobile Priority */}
-        <form onSubmit={handleSubmit} className="email-form mobile-email-priority" noValidate>
+      {/* 2. Where will your money take you? */}
+      <div className="value-quote-top">
+        <p className="value-question">"Where will your money take you?"</p>
+      </div>
+
+      {/* 3. Email Collection Form */}
+      <div className="glass-container-refined max-w-2xl w-full text-center">
+        <form onSubmit={handleSubmit} className="email-form" noValidate>
           <div className="email-field">
             <Input
               type="email"
@@ -214,15 +218,16 @@ const HeroSection = () => {
             </div>
           )}
         </form>
+      </div>
 
-        {/* Hero Title - Mobile: Below email, Desktop: Above email */}
-        <h2 className="hero-title text-5xl md:text-7xl font-bold text-ice-crystal leading-tight mobile-title-reorder">
-          Control<br />
-          Your Money's<br />
-          Next Move
-        </h2>
+      {/* 4. Control Your Money's Next Move - Split into 2 lines on mobile */}
+      <h2 className="hero-title text-5xl md:text-7xl font-bold text-ice-crystal leading-tight mobile-split-title">
+        <span className="desktop-title">Control<br />Your Money's<br />Next Move</span>
+        <span className="mobile-title">Control Your Money's<br />Next Move</span>
+      </h2>
 
-        {/* Tagline */}
+      {/* 5. Combined Tagline & Stats */}
+      <div className="combined-tagline-stats">
         <div className="tagline-section">
           <div className="tagline-block">
             <p className="tagline-line">🚩 Stop settling for a rearview budget.</p>
@@ -230,36 +235,18 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Trust Indicator */}
-        <div className="trust-indicators flex items-center justify-center space-x-6 text-sm text-ice-crystal/60 mt-8">
-          <span className="flex items-center">
-            <div className="w-2 h-2 bg-aqua-ethereal rounded-full mr-2 animate-pulse"></div>
-            AI-powered
-          </span>
-          <span className="flex items-center">
-            <div className="w-2 h-2 bg-money-green rounded-full mr-2"></div>
-            Bank-grade security
-          </span>
+        {/* Stats - Integrated */}
+        <div className="stats-integrated">
+          <div className="stats-content">
+            <span>5,000+ Transactions Categorized</span>
+            <span>99.2% AI Precision</span>
+            <span>Set up in &lt;3 minutes</span>
+          </div>
         </div>
       </div>
 
-      {/* Value Quote - Below Glass */}
-      <div className="value-quote">
-        <p className="value-question">"Where will your money take you in 1 year?"</p>
-        <p className="value-challenge">In less than 5 minutes...<br />Let AI map your financial future so you don't have to!</p>
-      </div>
-
-      {/* Stats Bar - Trust Metrics */}
-      <div className="stats-bar">
-        <div className="stats-content">
-          <span>5,000+ Transactions</span>
-          <span>99.2% AI Precision</span>
-          <span>Setup in 5 Minutes</span>
-        </div>
-      </div>
-
-      {/* Footer Links */}
-      <div className="footer-links mt-8 text-center">
+      {/* 6. Privacy Policy & Terms of Service - Very Bottom */}
+      <div className="footer-links">
         <a href="/privacy" className="footer-link">Privacy Policy</a>
         <span className="text-ice-crystal/40 mx-3">•</span>
         <a href="/terms" className="footer-link">Terms of Service</a>
