@@ -459,7 +459,7 @@
   /* Mobile Responsive Adjustments */
   @media (max-width: 768px) {
     .logo-section {
-      margin: 40px auto 30px;
+      margin: 20px auto 30px;
     }
     
     .logo-tile {
@@ -529,6 +529,22 @@
        padding: 15px 20px;
        margin: 30px 15px 0;
      }
+  }
+  
+  /* Mobile Email Input Fixes */
+  @media (max-width: 480px) {
+    .email-input {
+      font-size: 14px !important;
+      line-height: 1.5;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      padding: 12px 44px 12px 16px !important;
+    }
+    
+    .email-input::placeholder {
+      font-size: 14px;
+    }
   }
   
   @media (prefers-reduced-motion: reduce) {
