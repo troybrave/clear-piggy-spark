@@ -159,12 +159,12 @@ const HeroSection = () => {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 pt-16">
       {/* 1. Clear Piggy Logo & Headline - DOUBLED SIZE */}
       <div className="logo-section logo-enhanced">
-        <h1 className="logo-text logo-floating">Clear Piggy</h1>
-        <img src="/lovable-uploads/11a74ea6-2a59-4e9e-af54-bc6ff64f1aae.png" alt="Clear Piggy Logo" className="logo-img logo-floating" />
+        <h1 className="logo-text text-shimmer">Clear Piggy</h1>
+        <img src="/lovable-uploads/11a74ea6-2a59-4e9e-af54-bc6ff64f1aae.png" alt="Clear Piggy Logo" className="logo-img" />
       </div>
 
       {/* 2. Control Your Money's Next Move - NEW TOP POSITION */}
-      <h2 className="hero-title-new text-shimmer text-center">
+      <h2 className="hero-title-new hero-title-breathing text-center">
         <span className="control-line">Control Your</span>
         <span className="move-line">Money's Next Move</span>
       </h2>
