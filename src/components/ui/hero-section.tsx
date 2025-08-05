@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
 import { Card, CardContent } from '@/components/ui/card';
+// Fixed: Removed isSubmitted reference and using submitState instead
 
 const HeroSection = () => {
   const [email, setEmail] = useState('');
