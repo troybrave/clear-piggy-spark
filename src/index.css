@@ -46,8 +46,7 @@
     /* Gradients */
     --hero-gradient: linear-gradient(135deg, hsl(var(--fresh-navy)), hsl(var(--regal-green)));
     --brand-text-gradient: linear-gradient(135deg, hsl(var(--cyan-electric)), hsl(var(--aqua-ethereal)));
-    --rainbow-gradient: conic-gradient(from 0deg, #40CBF0 0%, #7FFFD4 25%, #8A2BE2 50%, #FF1493 75%, #40CBF0 100%);
-    --transition-speed: 0.3s;
+    --rainbow-gradient: linear-gradient(45deg, #40CBF0 0%, #7FFFD4 15%, #8A2BE2 30%, #FF1493 50%, #FF4500 70%, #FF8C42 85%, #40CBF0 100%);
   }
 
   .dark {
@@ -659,57 +658,45 @@
     font-weight: 500;
   }
 
-  /* Static Apple-Style Rainbow Glow Email Field */
-  .hero-demonstration .email-field-premium {
+  /* Enhanced Email Field with Rainbow Glow */
+  .email-field-premium {
     position: relative;
-    z-index: 1;
-    border-radius: 16px;
     margin: 1.5rem auto;
     max-width: 400px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+    animation: rainbow-glow 3s infinite ease-in-out;
   }
 
-  .hero-demonstration .email-field-premium input {
-    background: #021C25; /* Dark green center */
-    border: none;
-    color: #E0FFFF;
-    border-radius: 16px; /* Match container */
+  @keyframes rainbow-glow {
+    0% { 
+      transform: scale(1); 
+      box-shadow: 0 0 4px rgba(64, 203, 240, 0.3), 0 0 8px rgba(127, 255, 212, 0.2), 0 0 12px rgba(138, 43, 226, 0.1);
+    }
+    50% { 
+      transform: scale(1.02); 
+      box-shadow: 0 0 8px rgba(64, 203, 240, 0.4), 0 0 16px rgba(127, 255, 212, 0.3), 0 0 20px rgba(138, 43, 226, 0.2);
+    }
+    100% { 
+      transform: scale(1); 
+      box-shadow: 0 0 4px rgba(64, 203, 240, 0.3), 0 0 8px rgba(127, 255, 212, 0.2), 0 0 12px rgba(138, 43, 226, 0.1);
+    }
   }
 
-  /* Subtle Rainbow Border Glow */
-  .hero-demonstration .email-field-premium::before {
-    content: '';
-    position: absolute;
-    top: -2px; 
-    left: -2px; 
-    right: -2px; 
-    bottom: -2px;
-    background: var(--rainbow-gradient);
-    opacity: 0.4; /* Subtle glow */
-    z-index: -1;
-    box-shadow: 0 0 calc(1vw + 3px) var(--rainbow-gradient);
-    border-radius: 16px; /* Inherit radius */
-    transition: box-shadow var(--transition-speed), opacity var(--transition-speed);
+  .email-field-premium:focus-within,
+  .email-field-premium:hover {
+    box-shadow: 0 0 12px rgba(64, 203, 240, 0.5), 0 0 24px rgba(127, 255, 212, 0.4), 0 0 32px rgba(138, 43, 226, 0.3);
   }
 
-  .hero-demonstration .email-field-premium:hover::before {
-    box-shadow: 0 0 calc(1.2vw + 5px) var(--rainbow-gradient);
-    opacity: 0.5;
-  }
-
-  .hero-demonstration .email-field-premium:focus-within::before {
-    animation: pulseOpacity 0.5s ease-in-out;
-  }
-
-  @keyframes pulseOpacity {
-    0% { opacity: 0.6; }
-    50% { opacity: 0.7; }
-    100% { opacity: 0.6; }
+  .email-field-premium:focus-within {
+    animation-play-state: paused;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .hero-demonstration .email-field-premium::before {
+    .email-field-premium {
       animation: none;
-      opacity: 0.4;
+      box-shadow: 0 0 4px rgba(64, 203, 240, 0.3), 0 0 8px rgba(127, 255, 212, 0.2);
     }
   }
 
