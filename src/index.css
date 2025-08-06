@@ -262,13 +262,92 @@
     margin: 0 auto 20px auto;
   }
 
+  /* Premium Email Field with True Rainbow Border */
+  .hero-demonstration .email-field-premium {
+    position: relative;
+    z-index: 1;
+    border-radius: 50px;
+    transition: box-shadow 0.3s;
+    animation: subtle-breath 3s infinite ease-in-out;
+  }
+
+  @keyframes subtle-breath {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.005); }
+    100% { transform: scale(1); }
+  }
+
+  .hero-demonstration .email-field-premium input {
+    background: #021C25 !important;
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 16px !important;
+    padding: 1rem 3.5rem 1rem 1rem !important;
+    font-size: 1rem !important;
+    color: #E0FFFF !important;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    outline: none !important;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+
+  .hero-demonstration .email-field-premium input::placeholder {
+    color: #E0FFFF;
+    opacity: 0.7;
+  }
+
+  .hero-demonstration .email-field-premium .arrow-icon-premium {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #7FFFD4;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+
+  /* Static Rainbow Border Glow */
+  .hero-demonstration .email-field-premium::before {
+    content: '';
+    position: absolute;
+    top: -2px; 
+    left: -2px; 
+    right: -2px; 
+    bottom: -2px;
+    background: conic-gradient(from 0deg, #40CBF0 0%, #7FFFD4 25%, #8A2BE2 50%, #FF1493 75%, #40CBF0 100%);
+    opacity: 0.4;
+    z-index: -1;
+    box-shadow: 0 0 calc(1vw + 3px) rgba(64, 203, 240, 0.4), 0 0 calc(0.5vw + 2px) rgba(127, 255, 212, 0.3), 0 0 calc(0.3vw + 1px) rgba(138, 43, 226, 0.2);
+    border-radius: 50px;
+    transition: box-shadow 0.3s, opacity 0.3s;
+  }
+
+  .hero-demonstration .email-field-premium:hover::before {
+    box-shadow: 0 0 calc(1.2vw + 5px) rgba(64, 203, 240, 0.5), 0 0 calc(0.7vw + 3px) rgba(127, 255, 212, 0.4);
+    opacity: 0.5;
+  }
+
+  .hero-demonstration .email-field-premium:focus-within::before {
+    animation: pulseOpacity 0.5s ease-in-out;
+  }
+
+  @keyframes pulseOpacity {
+    0% { opacity: 0.6; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.6; }
+  }
+
+  /* Legacy email field styles */
   .email-input {
-    background: rgba(255,255,255,0.12); /* Transparent glass */
+    background: rgba(255,255,255,0.12);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255,255,255,0.15) !important;
     color: hsl(var(--ice-crystal)) !important;
     font-weight: 500;
-    padding: 18px 50px 18px 20px !important; /* Room for arrow */
+    padding: 18px 50px 18px 20px !important;
     border-radius: 50px !important;
     width: 100%;
     font-size: 16px !important;
@@ -276,7 +355,7 @@
     box-shadow: 
       0 0 15px rgba(64,203,240,0.4),
       0 0 30px rgba(127,255,212,0.2),
-      0 0 45px rgba(138,43,226,0.1) !important; /* Rainbow glow layers */
+      0 0 45px rgba(138,43,226,0.1) !important;
     transition: box-shadow 0.3s ease !important;
     outline: none !important;
     text-align: left !important;
@@ -289,7 +368,7 @@
       0 0 40px rgba(127,255,212,0.4),
       0 0 55px rgba(138,43,226,0.3),
       0 0 70px rgba(255,20,147,0.2),
-      0 0 85px rgba(255,69,0,0.1) !important; /* Enhanced rainbow glow */
+      0 0 85px rgba(255,69,0,0.1) !important;
     ring: none !important;
   }
 
@@ -299,7 +378,7 @@
     top: 50%;
     transform: translateY(-50%);
     color: hsl(var(--aqua-ethereal));
-    text-shadow: 0 0 8px rgba(127,255,212,0.3); /* Tokenized */
+    text-shadow: 0 0 8px rgba(127,255,212,0.3);
     cursor: pointer;
     padding: 8px;
     background: transparent;
@@ -310,9 +389,9 @@
   .arrow-icon:hover,
   .email-input:focus + .arrow-icon {
     color: hsl(var(--cyan-electric));
-    text-shadow: 0 0 12px rgba(64,203,240,0.5); /* Dynamic glow */
-    transform: translateY(-50%) translateX(2px); /* Subtle shift */
-    animation: glowPulse 1.4s ease-in-out infinite; /* Optional shimmer */
+    text-shadow: 0 0 12px rgba(64,203,240,0.5);
+    transform: translateY(-50%) translateX(2px);
+    animation: glowPulse 1.4s ease-in-out infinite;
   }
 
   .arrow-icon:focus {
@@ -954,6 +1033,13 @@
   }
   
   @media (prefers-reduced-motion: reduce) {
+    .hero-demonstration .email-field-premium {
+      animation: none;
+    }
+    .hero-demonstration .email-field-premium::before {
+      animation: none;
+      opacity: 0.4;
+    }
     .rainbow-glow-btn,
     .glass-input {
       transition: none;
