@@ -156,7 +156,7 @@ const HeroSection = () => {
 
   // Default Form Screen
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 pt-16">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 pt-16 hero-demonstration">
       {/* 1. Clear Piggy Logo & Headline - DOUBLED SIZE */}
       <div className="logo-section logo-enhanced">
         <h1 className="logo-text">Clear Piggy</h1>
@@ -230,16 +230,16 @@ const HeroSection = () => {
           )}
         </form>
 
-        {/* Trust-building microcopy */}
-        <div className="hero-demonstration">
-          <p className="microcopy">See your spending & let AI reveal your forecast. It all begins with your email.</p>
+        {/* Updated microcopy */}
+        <div className="microcopy-container">
+          <p className="microcopy">Get a secure link to upload your bank transactions. AI will effortlessly organize your past and forecast your financial future. Clarity doesn't live in the rearview. When you control your money, you choose your future.</p>
         </div>
       </div>
 
       {/* 4. Stats with Rainbow Glow - SEPARATED */}
       <div className="stats-rainbow-container">
         <div className="stats-content-rainbow">
-          <span className="stat-item">5,000+ Transactions Categorized</span>
+          <span className="stat-item">Auto categorize up to 5,000 transactions at a time</span>
           <span className="stat-item">99.2% AI Precision</span>
           <span className="stat-item">Set up in &lt;3 minutes</span>
         </div>
@@ -248,7 +248,7 @@ const HeroSection = () => {
       {/* 5. Empowering Footer Anchor */}
       <div className="footer">
         <div className="footer-divider"></div>
-        <p className="footer-ethos">Clarity doesn't live in the rearview. When you control your money, you choose your future.</p>
+        <p className="ethos">Clarity doesn't live in the rearview. When you control your money, you choose your future.</p>
         
         {/* Privacy Policy & Terms of Service - Very Bottom */}
         <div className="footer-links">
