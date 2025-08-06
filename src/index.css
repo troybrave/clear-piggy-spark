@@ -7,13 +7,13 @@
 @layer base {
   :root {
     /* Clear Piggy Brand Colors */
-    --fresh-navy: 195 89% 7%;        /* #021C25 */
+    --fresh-navy: 220 15% 4%;           /* #0A0B0F - Much darker like x.ai */
     --cyan-electric: 193 88% 60%;    /* #40CBF0 */
     --aqua-ethereal: 159 100% 73%;   /* #7FFFD4 */
-    --regal-green: 174 100% 15%;     /* #014D40 */
+    --regal-green: 174 100% 8%;      /* #001A15 - Darker green */
     --money-green: 84 48% 47%;       /* #69B437 */
     --ice-crystal: 180 100% 94%;     /* #E0FFFF */
-    --teal-shadow: 194 44% 20%;      /* #1A3B47 */
+    --teal-shadow: 220 20% 8%;       /* #141518 - Much darker */
 
     /* Design System Tokens */
     --background: var(--fresh-navy);
@@ -44,7 +44,7 @@
     --radius: 1rem;
 
     /* Gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(var(--fresh-navy)), hsl(var(--regal-green)));
+    --hero-gradient: linear-gradient(135deg, hsl(220 15% 4%), hsl(174 100% 8%));
     --brand-text-gradient: linear-gradient(135deg, hsl(var(--cyan-electric)), hsl(var(--aqua-ethereal)));
     --rainbow-gradient: linear-gradient(45deg, #40CBF0 0%, #7FFFD4 15%, #8A2BE2 30%, #FF1493 50%, #FF4500 70%, #FF8C42 85%, #40CBF0 100%);
   }
