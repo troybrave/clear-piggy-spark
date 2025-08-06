@@ -91,11 +91,6 @@
     height: 136px;
     width: auto;
     filter: drop-shadow(0 0 12px rgba(127,255,212,0.3));
-    transition: filter 0.3s ease;
-  }
-
-  .logo-img:hover {
-    filter: drop-shadow(0 0 16px rgba(127,255,212,0.5)) brightness(1.1) saturate(1.2);
   }
 
   /* Glass Container - Refined */
@@ -732,7 +727,7 @@
 
   .value-question-inside {
     font-style: italic;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     color: hsl(var(--ice-crystal) / 0.9);
     font-weight: 500;
     position: relative;
