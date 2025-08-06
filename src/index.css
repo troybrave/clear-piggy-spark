@@ -206,17 +206,14 @@
   /* Mobile Hero Polish */
   @media (max-width: 600px) {
     .glass-container-premium {
-      padding: 0.125rem 0.25rem !important;
-      margin: 0 0.75rem 0.25rem !important;
-      width: 70% !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
+      padding: 0.25rem 0.5rem !important;
+      margin: 0 0.5rem 0.5rem !important;
     }
     
     .value-question-inside {
-      font-size: 1.5rem !important;
+      font-size: 1.75rem !important;
       font-weight: 600 !important;
-      padding: 0.125rem 0 !important;
+      padding: 0.25rem 0 !important;
       text-shadow: 0 0 5px rgba(224, 255, 255, 0.3) !important;
       text-decoration: none !important;
     }
@@ -1191,11 +1188,6 @@
     .email-input-premium {
       font-size: 16px !important;
       padding: 0.875rem 3rem 0.875rem 1rem !important;
-    }
-    
-    .email-field-premium {
-      max-width: 70% !important;
-      margin: 1rem auto !important;
     }
     
     .tagline-line-inside {
