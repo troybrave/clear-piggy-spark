@@ -173,7 +173,7 @@ const HeroSection = () => {
       <div className="glass-container-premium max-w-2xl w-full text-center">
         {/* Where will your money take you - MOVED INSIDE GLASS */}
         <div className="value-quote-inside">
-          <p className="value-question-inside">"Where will your money take you?"</p>
+          <p className="value-question-inside">Where will your money take you?</p>
         </div>
 
         <form onSubmit={handleSubmit} className="email-form-enhanced" noValidate>
