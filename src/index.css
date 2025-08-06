@@ -263,7 +263,7 @@
   }
 
   /* Premium Email Field with True Rainbow Border */
-  .hero-demonstration .email-field-premium {
+  .email-field-premium {
     position: relative;
     z-index: 1;
     border-radius: 50px;
@@ -277,7 +277,7 @@
     100% { transform: scale(1); }
   }
 
-  .hero-demonstration .email-field-premium input {
+  .email-field-premium input {
     background: #021C25 !important;
     border: 2px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 16px !important;
@@ -292,12 +292,12 @@
     font-weight: 500;
   }
 
-  .hero-demonstration .email-field-premium input::placeholder {
+  .email-field-premium input::placeholder {
     color: #E0FFFF;
     opacity: 0.7;
   }
 
-  .hero-demonstration .email-field-premium .arrow-icon-premium {
+  .arrow-icon-premium {
     position: absolute;
     right: 1rem;
     top: 50%;
@@ -310,7 +310,7 @@
   }
 
   /* Static Rainbow Border Glow */
-  .hero-demonstration .email-field-premium::before {
+  .email-field-premium::before {
     content: '';
     position: absolute;
     top: -2px; 
@@ -325,12 +325,12 @@
     transition: box-shadow 0.3s, opacity 0.3s;
   }
 
-  .hero-demonstration .email-field-premium:hover::before {
+  .email-field-premium:hover::before {
     box-shadow: 0 0 calc(1.2vw + 5px) rgba(64, 203, 240, 0.5), 0 0 calc(0.7vw + 3px) rgba(127, 255, 212, 0.4);
     opacity: 0.5;
   }
 
-  .hero-demonstration .email-field-premium:focus-within::before {
+  .email-field-premium:focus-within::before {
     animation: pulseOpacity 0.5s ease-in-out;
   }
 
@@ -1033,10 +1033,10 @@
   }
   
   @media (prefers-reduced-motion: reduce) {
-    .hero-demonstration .email-field-premium {
+    .email-field-premium {
       animation: none;
     }
-    .hero-demonstration .email-field-premium::before {
+    .email-field-premium::before {
       animation: none;
       opacity: 0.4;
     }
