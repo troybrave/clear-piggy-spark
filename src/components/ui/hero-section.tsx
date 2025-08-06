@@ -230,10 +230,9 @@ const HeroSection = () => {
           )}
         </form>
 
-        {/* Taglines MOVED INSIDE GLASS */}
-        <div className="tagline-section-inside">
-          <p className="tagline-line-inside">Clarity doesn't live in the rearview.</p>
-          <p className="tagline-line-inside">Control your money. Choose your future.</p>
+        {/* Trust-building microcopy */}
+        <div className="hero-demonstration">
+          <p className="microcopy">See your spending & let AI reveal your forecast. It all begins with your email.</p>
         </div>
       </div>
 
