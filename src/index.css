@@ -75,7 +75,7 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
-    margin: 60px auto 50px;
+    margin: 60px auto 30px;
   }
 
   .logo-text {
@@ -739,7 +739,8 @@
     border-radius: 24px;
     padding: 3rem 2rem;
     margin: 0 1rem 2rem;
-    box-shadow: 
+    margin-top: 1rem;
+    box-shadow:
       0 8px 32px rgba(0, 0, 0, 0.1),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
@@ -1207,12 +1208,16 @@
   .microcopy {
     color: #E0FFFF;
     opacity: 0;
-    text-align: center;
+    text-align: left;
     max-width: 400px;
     margin: 1rem auto;
     font-size: 1.1rem;
     font-weight: 300;
     animation: fadeInMicrocopy 0.5s 0.5s forwards;
+  }
+
+  .microcopy-line {
+    margin-bottom: 0.5rem;
   }
 
   @keyframes fadeInMicrocopy {

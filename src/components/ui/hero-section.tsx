@@ -230,17 +230,20 @@ const HeroSection = () => {
           )}
         </form>
 
-        {/* Updated microcopy */}
+        {/* Updated microcopy with bullet points */}
         <div className="microcopy-container">
-          <p className="microcopy">Get a secure link to upload your bank transactions. AI will effortlessly organize your past and forecast your financial future. Clarity doesn't live in the rearview. When you control your money, you choose your future.</p>
+          <div className="microcopy">
+            <div className="microcopy-line">• Get a secure link to upload your bank transactions.</div>
+            <div className="microcopy-line">• AI will effortlessly organize your past and forecast your financial future.</div>
+          </div>
         </div>
       </div>
 
       {/* 4. Stats with Rainbow Glow - SEPARATED */}
       <div className="stats-rainbow-container">
         <div className="stats-content-rainbow">
-          <span className="stat-item">Auto categorize up to 5,000 transactions at a time</span>
-          <span className="stat-item">99.2% AI Precision</span>
+          <span className="stat-item">AI Categorize 100% of your transactions</span>
+          <span className="stat-item">Unmatched AI Precision</span>
           <span className="stat-item">Set up in &lt;3 minutes</span>
         </div>
       </div>
