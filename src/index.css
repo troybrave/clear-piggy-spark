@@ -788,6 +788,33 @@
     to { opacity: 0.8; }
   }
 
+  /* Empowering Footer Anchor */
+  .footer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 60%;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .footer-ethos {
+    font-size: 15px;
+    color: #88F9E0;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    transition: color 0.2s ease;
+  }
+
+  .footer-ethos:hover {
+    color: #A0FFD4;
+  }
+
   /* Enhanced Email Field with Rainbow Glow */
   .email-field-premium {
     position: relative;
@@ -1110,6 +1137,22 @@
     .hero-demonstration .microcopy {
       animation: none;
       opacity: 0.8;
+    }
+    
+    /* Disable footer hover transition for users who prefer reduced motion */
+    .footer-ethos {
+      transition: none;
+    }
+    .footer-ethos:hover {
+      color: #88F9E0;
+    }
+    
+    /* Responsive footer adjustments */
+    @media (max-width: 600px) {
+      .footer-ethos {
+        margin-top: 16px;
+        font-size: 14px;
+      }
     }
   }
 }

@@ -245,11 +245,17 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* 5. Privacy Policy & Terms of Service - Very Bottom */}
-      <div className="footer-links">
-        <a href="/privacy" className="footer-link">Privacy Policy</a>
-        <span className="text-ice-crystal/40 mx-3">•</span>
-        <a href="/terms" className="footer-link">Terms of Service</a>
+      {/* 5. Empowering Footer Anchor */}
+      <div className="footer">
+        <hr className="footer-divider" />
+        <p className="footer-ethos">Clarity doesn't live in the rearview. When you control your money, you choose your future.</p>
+        
+        {/* Privacy Policy & Terms of Service - Very Bottom */}
+        <div className="footer-links">
+          <a href="/privacy" className="footer-link">Privacy Policy</a>
+          <span className="text-ice-crystal/40 mx-3">•</span>
+          <a href="/terms" className="footer-link">Terms of Service</a>
+        </div>
       </div>
     </div>
   );
