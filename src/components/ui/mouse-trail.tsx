@@ -31,20 +31,20 @@ export const MouseTrail = () => {
       mouseRef.current.x = e.clientX;
       mouseRef.current.y = e.clientY;
 
-      // Add new particles
-      for (let i = 0; i < 3; i++) {
+      // Add subtle spotlight particle
+      if (Math.random() > 0.8) { // Much less frequent
         particlesRef.current.push({
-          x: e.clientX + (Math.random() - 0.5) * 20,
-          y: e.clientY + (Math.random() - 0.5) * 20,
+          x: e.clientX,
+          y: e.clientY,
           life: 0,
-          maxLife: 60 + Math.random() * 40,
+          maxLife: 120 + Math.random() * 60,
           id: particleIdRef.current++
         });
       }
 
       // Keep only recent particles
-      if (particlesRef.current.length > 200) {
-        particlesRef.current = particlesRef.current.slice(-150);
+      if (particlesRef.current.length > 20) {
+        particlesRef.current = particlesRef.current.slice(-15);
       }
     };
 
@@ -55,29 +55,28 @@ export const MouseTrail = () => {
       particlesRef.current = particlesRef.current.filter(particle => {
         particle.life++;
         
-        const alpha = Math.max(0, 1 - (particle.life / particle.maxLife));
-        const size = (1 - particle.life / particle.maxLife) * 8;
+        const alpha = Math.max(0, 1 - (particle.life / particle.maxLife)) * 0.08; // Much more subtle
+        const size = (1 - particle.life / particle.maxLife) * 80; // Larger spotlight
         
         if (alpha <= 0) return false;
 
-        // Create smoke-like gradient
+        // Create subtle spotlight gradient
         const gradient = ctx.createRadialGradient(
           particle.x, particle.y, 0,
           particle.x, particle.y, size
         );
         
-        gradient.addColorStop(0, `rgba(64, 203, 240, ${alpha * 0.6})`);
-        gradient.addColorStop(0.5, `rgba(127, 255, 212, ${alpha * 0.3})`);
-        gradient.addColorStop(1, `rgba(224, 255, 255, ${alpha * 0.1})`);
+        gradient.addColorStop(0, `rgba(255, 255, 255, ${alpha * 0.3})`);
+        gradient.addColorStop(0.3, `rgba(64, 203, 240, ${alpha * 0.15})`);
+        gradient.addColorStop(0.7, `rgba(127, 255, 212, ${alpha * 0.08})`);
+        gradient.addColorStop(1, `rgba(224, 255, 255, 0)`);
 
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
         ctx.fill();
 
-        // Add some drift
-        particle.x += (Math.random() - 0.5) * 2;
-        particle.y += (Math.random() - 0.5) * 2;
+        // No drift for spotlight effect
 
         return true;
       });
