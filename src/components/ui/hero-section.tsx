@@ -237,7 +237,7 @@ const HeroSection = () => {
         <div className="stats-content-rainbow">
           <div className="stats-header">In less than 3 minutes:</div>
           <div className="stats-bullets">
-            <div className="stats-bullet">• Receive a secure link to upload your bank transactions</div>
+            <div className="stats-bullet">• Receive a secure link to upload your transactions</div>
             <div className="stats-bullet">• AI effortlessly organizes your financial past</div>
             <div className="stats-bullet">• See into your future - if nothing changes</div>
           </div>

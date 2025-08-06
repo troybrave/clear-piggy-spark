@@ -203,6 +203,47 @@
     @apply text-left text-ice-crystal/90 text-sm;
   }
 
+  /* Mobile Hero Polish */
+  @media (max-width: 600px) {
+    .glass-container-premium {
+      padding: 1rem !important;
+      margin: 0 1rem 2rem;
+    }
+    
+    .value-question-inside {
+      font-size: 1.75rem !important;
+      font-weight: 600 !important;
+      padding: 0.75rem 0 !important;
+      text-shadow: 0 0 5px rgba(224, 255, 255, 0.3) !important;
+      text-decoration: none !important;
+    }
+    
+    .value-question-inside::after {
+      content: none !important;
+    }
+    
+    .stats-rainbow-container {
+      max-width: 95%;
+      margin: 0 auto;
+    }
+    
+    .stats-bullet {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .value-question-inside {
+      text-shadow: none !important;
+    }
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 0.8; }
+  }
+
   .stats-bar::after {
     content: '';
     height: 1px;
