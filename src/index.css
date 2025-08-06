@@ -46,7 +46,8 @@
     /* Gradients */
     --hero-gradient: linear-gradient(135deg, hsl(var(--fresh-navy)), hsl(var(--regal-green)));
     --brand-text-gradient: linear-gradient(135deg, hsl(var(--cyan-electric)), hsl(var(--aqua-ethereal)));
-    --rainbow-gradient: linear-gradient(45deg, #40CBF0 0%, #7FFFD4 15%, #8A2BE2 30%, #FF1493 50%, #FF4500 70%, #FF8C42 85%, #40CBF0 100%);
+    --rainbow-gradient: conic-gradient(from 0deg, #40CBF0 0%, #7FFFD4 25%, #8A2BE2 50%, #FF1493 75%, #40CBF0 100%);
+    --transition-speed: 0.3s;
   }
 
   .dark {
@@ -767,7 +768,13 @@
     color: hsl(var(--ice-crystal) / 0.9);
     font-weight: 500;
     position: relative;
+    padding: 0.75rem 0;
+    transition: box-shadow var(--transition-speed);
     animation: shimmer 1.5s ease-in forwards, subtle-breathing-glow 4s ease-in-out infinite;
+  }
+
+  .value-question-inside:hover {
+    box-shadow: 0 0 calc(1vw + 3px) var(--rainbow-gradient);
   }
 
   .value-question-inside:hover {
@@ -1205,22 +1212,50 @@
     margin-top: 1rem;
   }
 
-  .microcopy {
-    color: #E0FFFF;
-    opacity: 0;
-    text-align: left;
-    max-width: 400px;
+  /* Glowing Green Box */
+  .glowing-green-box {
+    padding: 0.5rem;
+    background: linear-gradient(135deg, #014D40, #69B437);
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(105, 180, 55, 0.5);
+    text-align: center;
     margin: 1rem auto;
-    font-size: 1.1rem;
-    font-weight: 300;
-    animation: fadeInMicrocopy 0.5s 0.5s forwards;
+    max-width: 400px;
   }
 
-  .microcopy-line {
+  .glowing-green-box .header {
+    color: #E0FFFF;
+    font-size: 1rem;
+    font-weight: 500;
     margin-bottom: 0.5rem;
   }
 
-  @keyframes fadeInMicrocopy {
+  .glowing-green-box .microcopy {
+    color: #E0FFFF;
+    opacity: 0;
+    text-align: left;
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-weight: 300;
+    animation: fadeIn 0.5s 0.5s forwards;
+  }
+
+  .glowing-green-box .microcopy span {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Hero Bottom Line */
+  .hero-bottom-line {
+    height: 2px;
+    background: #1A3B47;
+    box-shadow: 0 0 calc(1vw + 3px) var(--rainbow-gradient);
+    margin: 1rem auto;
+    max-width: 200px;
+  }
+
+  @keyframes fadeIn {
     to { opacity: 0.8; }
   }
 
@@ -1318,6 +1353,13 @@
       text-shadow: 0 0 2px hsl(var(--ice-crystal) / 0.015);
       transform: none;
       filter: none;
+      box-shadow: none;
+    }
+
+    .glowing-green-box .microcopy,
+    .hero-bottom-line {
+      animation: none;
+      opacity: 0.8;
     }
     
     /* Disable microcopy animation for users who prefer reduced motion */
