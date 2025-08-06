@@ -659,61 +659,57 @@
     font-weight: 500;
   }
 
-  /* Enhanced Email Field with Apple-Style Rainbow Glow */
-  .email-field-premium {
+  /* Static Apple-Style Rainbow Glow Email Field */
+  .hero-demonstration .email-field-premium {
     position: relative;
+    z-index: 1;
+    border-radius: 16px;
     margin: 1.5rem auto;
     max-width: 400px;
-    background: transparent;
-    border-radius: 50px;
-    padding: 3px; /* Creates border thickness */
+  }
+
+  .hero-demonstration .email-field-premium input {
+    background: #021C25; /* Dark green center */
+    border: none;
+    color: #E0FFFF;
+    border-radius: 16px; /* Match container */
+  }
+
+  /* Subtle Rainbow Border Glow */
+  .hero-demonstration .email-field-premium::before {
+    content: '';
+    position: absolute;
+    top: -2px; 
+    left: -2px; 
+    right: -2px; 
+    bottom: -2px;
     background: var(--rainbow-gradient);
-    z-index: 1;
-    transition: transform var(--transition-speed);
-    animation: rotateGlow 3s infinite linear;
+    opacity: 0.4; /* Subtle glow */
+    z-index: -1;
+    box-shadow: 0 0 calc(1vw + 3px) var(--rainbow-gradient);
+    border-radius: 16px; /* Inherit radius */
+    transition: box-shadow var(--transition-speed), opacity var(--transition-speed);
   }
 
-  /* Inner container to create border effect */
-  .email-field-premium > * {
-    background: hsl(var(--fresh-navy));
-    border-radius: 47px; /* Slightly smaller to show border */
-    position: relative;
-    z-index: 2;
+  .hero-demonstration .email-field-premium:hover::before {
+    box-shadow: 0 0 calc(1.2vw + 5px) var(--rainbow-gradient);
+    opacity: 0.5;
   }
 
-  @keyframes rotateGlow {
-    0% { 
-      transform: rotate(0deg) scale(1);
-      filter: hue-rotate(0deg) brightness(1);
-    }
-    50% { 
-      transform: rotate(10deg) scale(1.05);
-      filter: hue-rotate(60deg) brightness(1.2);
-    }
-    100% { 
-      transform: rotate(0deg) scale(1);
-      filter: hue-rotate(0deg) brightness(1);
-    }
+  .hero-demonstration .email-field-premium:focus-within::before {
+    animation: pulseOpacity 0.5s ease-in-out;
   }
 
-  .email-field-premium:focus-within,
-  .email-field-premium:hover {
-    transform: scale(1.02);
-    filter: hue-rotate(30deg) brightness(1.3);
-  }
-
-  .email-field-premium input:focus {
-    animation-play-state: paused;
+  @keyframes pulseOpacity {
+    0% { opacity: 0.6; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.6; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .email-field-premium {
+    .hero-demonstration .email-field-premium::before {
       animation: none;
-      filter: brightness(1);
-    }
-    .email-field-premium:focus-within,
-    .email-field-premium:hover {
-      filter: brightness(1.1);
+      opacity: 0.4;
     }
   }
 
