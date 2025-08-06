@@ -190,6 +190,19 @@
     font-size: 17px;
   }
 
+  /* Stats Header and Bullets */
+  .stats-header {
+    @apply text-center font-bold text-ice-crystal mb-4 text-lg;
+  }
+
+  .stats-bullets {
+    @apply space-y-2;
+  }
+
+  .stats-bullet {
+    @apply text-left text-ice-crystal/90 text-sm;
+  }
+
   .stats-bar::after {
     content: '';
     height: 1px;

@@ -230,21 +230,17 @@ const HeroSection = () => {
           )}
         </form>
 
-        {/* Updated microcopy with bullet points */}
-        <div className="microcopy-container">
-          <div className="microcopy">
-            <div className="microcopy-line">• Get a secure link to upload your bank transactions.</div>
-            <div className="microcopy-line">• AI will effortlessly organize your past and forecast your financial future.</div>
-          </div>
-        </div>
       </div>
 
       {/* 4. Stats with Rainbow Glow - SEPARATED */}
       <div className="stats-rainbow-container">
         <div className="stats-content-rainbow">
-          <span className="stat-item">AI Categorize 100% of your transactions</span>
-          <span className="stat-item">Unmatched AI Precision</span>
-          <span className="stat-item">Set up in &lt;3 minutes</span>
+          <div className="stats-header">In less than 3 minutes:</div>
+          <div className="stats-bullets">
+            <div className="stats-bullet">• Receive a secure link to upload your bank transactions</div>
+            <div className="stats-bullet">• AI effortlessly organizes your financial past</div>
+            <div className="stats-bullet">• See into your future - if nothing changes</div>
+          </div>
         </div>
       </div>
 
