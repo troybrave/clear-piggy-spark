@@ -247,7 +247,7 @@ const HeroSection = () => {
 
       {/* 5. Empowering Footer Anchor */}
       <div className="footer">
-        <hr className="footer-divider" />
+        <div className="footer-divider"></div>
         <p className="footer-ethos">Clarity doesn't live in the rearview. When you control your money, you choose your future.</p>
         
         {/* Privacy Policy & Terms of Service - Very Bottom */}

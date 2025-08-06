@@ -795,10 +795,16 @@
   }
 
   .footer-divider {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--rainbow-gradient);
+    height: 3px;
     width: 60%;
     margin: 0 auto 1.5rem auto;
+    border-radius: 2px;
+    box-shadow: 
+      0 0 20px rgba(64, 203, 240, 0.4),
+      0 0 40px rgba(127, 255, 212, 0.3),
+      0 0 60px rgba(138, 43, 226, 0.2);
+    animation: subtle-breath 2.5s ease-in-out infinite;
   }
 
   .footer-ethos {
