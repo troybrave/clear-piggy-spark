@@ -722,7 +722,8 @@
 
   /* Value Question Inside Glass */
   .value-quote-inside {
-    margin-bottom: 1.5rem;
+    margin: 2rem auto 2rem;
+    padding: 1rem 0;
   }
 
   .value-question-inside {
@@ -731,7 +732,7 @@
     color: hsl(var(--ice-crystal) / 0.9);
     font-weight: 500;
     position: relative;
-    animation: shimmer 1.5s ease-in forwards;
+    animation: shimmer 1.5s ease-in forwards, subtle-breathing-glow 4s ease-in-out infinite;
   }
 
   .value-question-inside:hover::after {
@@ -759,6 +760,16 @@
   @keyframes rainbow-underline {
     from { width: 0; }
     to { width: 100%; }
+  }
+
+  /* Subtle breathing glow for subheadline - only 5% intensity */
+  @keyframes subtle-breathing-glow {
+    0%, 100% { 
+      text-shadow: 0 0 2px hsl(var(--ice-crystal) / 0.015);
+    }
+    50% { 
+      text-shadow: 0 0 4px hsl(var(--ice-crystal) / 0.03), 0 0 6px hsl(var(--ice-crystal) / 0.02);
+    }
   }
 
   /* Enhanced Email Field with Rainbow Glow */
@@ -1072,6 +1083,7 @@
       animation: none;
       opacity: 0.9;
       transform: none;
+      text-shadow: none;
     }
     .value-question-inside:hover::after {
       animation: none;
