@@ -658,11 +658,46 @@
     font-weight: 500;
   }
 
-  /* Enhanced Email Field */
+  /* Enhanced Email Field with Rainbow Glow */
   .email-field-premium {
     position: relative;
     margin: 1.5rem auto;
     max-width: 400px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+    animation: rainbow-glow 3s infinite ease-in-out;
+  }
+
+  @keyframes rainbow-glow {
+    0% { 
+      transform: scale(1); 
+      box-shadow: 0 0 4px rgba(64, 203, 240, 0.3), 0 0 8px rgba(127, 255, 212, 0.2), 0 0 12px rgba(138, 43, 226, 0.1);
+    }
+    50% { 
+      transform: scale(1.02); 
+      box-shadow: 0 0 8px rgba(64, 203, 240, 0.4), 0 0 16px rgba(127, 255, 212, 0.3), 0 0 20px rgba(138, 43, 226, 0.2);
+    }
+    100% { 
+      transform: scale(1); 
+      box-shadow: 0 0 4px rgba(64, 203, 240, 0.3), 0 0 8px rgba(127, 255, 212, 0.2), 0 0 12px rgba(138, 43, 226, 0.1);
+    }
+  }
+
+  .email-field-premium:focus-within,
+  .email-field-premium:hover {
+    box-shadow: 0 0 12px rgba(64, 203, 240, 0.5), 0 0 24px rgba(127, 255, 212, 0.4), 0 0 32px rgba(138, 43, 226, 0.3);
+  }
+
+  .email-field-premium:focus-within {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .email-field-premium {
+      animation: none;
+      box-shadow: 0 0 4px rgba(64, 203, 240, 0.3), 0 0 8px rgba(127, 255, 212, 0.2);
+    }
   }
 
   .email-input-premium {
