@@ -474,12 +474,46 @@
     transform: translateY(-1px);
   }
 
-  /* Brand Text Gradient */
+  /* Brand Text Gradient - Enhanced with Hover Effect */
   .brand-text {
-    background: var(--brand-text-gradient);
+    background: linear-gradient(135deg, hsl(var(--cyan-electric)), hsl(var(--aqua-ethereal)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    transition: background 0.3s ease, transform 0.3s ease;
+    will-change: background, transform;
+  }
+
+  .brand-text:hover {
+    background: linear-gradient(145deg, hsl(var(--cyan-electric)), hsl(var(--aqua-ethereal)));
+    transform: scale(1.02);
+  }
+
+  .brand-text:focus-visible {
+    outline: 2px solid hsl(var(--cyan-electric));
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  /* Browser Support Fallback */
+  @supports not (-webkit-background-clip: text) {
+    .brand-text {
+      background: hsl(var(--cyan-electric));
+      color: hsl(var(--cyan-electric));
+      -webkit-text-fill-color: unset;
+    }
+  }
+
+  /* Accessibility - Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .brand-text {
+      transition: none;
+      will-change: auto;
+    }
+    .brand-text:hover {
+      background: linear-gradient(135deg, hsl(var(--cyan-electric)), hsl(var(--aqua-ethereal)));
+      transform: none;
+    }
   }
 
   /* Value Quote Top - Default Desktop */
