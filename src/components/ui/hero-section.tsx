@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { toast } from '@/components/ui/use-toast';
-import { Card, CardContent } from '@/components/ui/card';
-// Fixed: Removed isSubmitted reference and using submitState instead
+import { EMAIL_WEBHOOK_URL, EMAIL_WEBHOOK_MODE } from '@/config';
 
 const HeroSection = () => {
   const [email, setEmail] = useState('');
@@ -42,24 +39,53 @@ const HeroSection = () => {
     console.log('Submitting email:', trimmedEmail); // Debug log
 
     try {
-      const response = await fetch('https://primary-production-6ccfb.up.railway.app/webhook-test/email-signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: trimmedEmail,
-          timestamp: new Date().toISOString(),
-        }),
-      });
+      const webhookUrl = EMAIL_WEBHOOK_URL || (typeof window !== 'undefined' ? localStorage.getItem('EMAIL_WEBHOOK_URL') || '' : '');
+      if (!webhookUrl) {
+        throw new Error('Missing webhook URL. Set EMAIL_WEBHOOK_URL or localStorage key "EMAIL_WEBHOOK_URL".');
+      }
 
-      console.log('Response status:', response.status); // Debug log
+      const isNoCors = EMAIL_WEBHOOK_MODE === 'no-cors';
 
-      if (response.ok) {
+      let fetchOptions: RequestInit;
+      if (isNoCors) {
+        // Use FormData for a simple, CORS-friendly request
+        const form = new FormData();
+        form.append('email', trimmedEmail);
+        form.append('timestamp', new Date().toISOString());
+        form.append('source', window.location.href);
+        fetchOptions = {
+          method: 'POST',
+          mode: 'no-cors',
+          body: form,
+        };
+      } else {
+        // Use JSON when CORS is properly configured on the endpoint
+        fetchOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: trimmedEmail,
+            timestamp: new Date().toISOString(),
+            source: window.location.href,
+          }),
+        };
+      }
+
+      const response = await fetch(webhookUrl, fetchOptions);
+
+      if (isNoCors) {
+        // Opaque responses cannot be inspected; assume success if no exception
         setSubmitState('success');
         setEmail('');
       } else {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        if (response.ok) {
+          setSubmitState('success');
+          setEmail('');
+        } else {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
       }
     } catch (error) {
       console.error('Submit error:', error); // Debug log
